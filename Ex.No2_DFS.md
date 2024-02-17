@@ -13,6 +13,11 @@ To write a python program to implement Depth first Search.
 7. Stop the program.
 ### Program:
 
+
+
+
+
+
 graph = {
   '5' : ['3','7'],
   '3' : ['2', '4'],
