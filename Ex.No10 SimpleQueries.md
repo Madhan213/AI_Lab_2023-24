@@ -21,9 +21,15 @@ Construct the FOL representation for the following sentences <br>
 5.	 Bill eats peanuts  <br> 
    Convert into clause form and Prove that John like Apple by using Prolog. <br> 
 ### Program:
-
-
+likes(john,X):-food(X).
+food(apple).
+food(vegetable).
+eats(bill,peanuts).
+eats(sue,X):-eats(bill,X).
+alive(bill).
 ### Output:
+![Screenshot 2024-03-09 160642](https://github.com/Madhan213/AI_Lab_2023-24/assets/130206230/dc3f489a-5f00-450d-ae0a-d3788de0e067)
+
 
 ### Task 2:
 Consider the following facts and represent them in predicate form: <br>              
@@ -34,18 +40,40 @@ Consider the following facts and represent them in predicate form: <br>
 Convert the facts in predicate form to clauses and then prove by resolution: “Steve likes BK301 course”<br> 
 
 ### Program:
-
+likes(steve,X):-
+     easycourse(X).
+hard(sciencecourse).
+easycourse(X):-
+    course(X,dept(havefun)).
+course(bk301,dept(havefun)).
 
 ### Output:
+![Screenshot 2024-03-09 160747](https://github.com/Madhan213/AI_Lab_2023-24/assets/130206230/e964c221-7f47-461d-9a48-bd1f075383fe)
 
 ### Task 3:
 Consider the statement <br> 
 “This is a crime for an American to sell weapons to hostile nations. The Nano , enemy of America has some missiles and its missiles were sold it by Colonal West who is an American” <br> 
 Convert to Clause form and prove west is criminal by using Prolog.<br> 
 ### Program:
-
+criminal(X):-
+	american(X),
+	weapon(Y),
+	hostile(Z),
+	sells(X,Y,Z).
+weapon(Y):-
+	missile(Y).
+hostile(Z):-
+	enemy(Z,X).
+sells(west,Y,nano):-
+    missile(Y),
+	owns(nano,Y).
+missile(m).
+owns(nano,m).
+enemy(nano,america).
+american(west).
 
 ### Output:
+![Screenshot 2024-03-09 161534](https://github.com/Madhan213/AI_Lab_2023-24/assets/130206230/73c79e0f-5ada-4d4a-890e-7a0a90c53b5d)
 
 ### Result:
 Thus the prolog programs were executed successfully and the answer of query was found.
