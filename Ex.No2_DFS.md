@@ -13,7 +13,7 @@ To write a python program to implement Depth first Search.
 7. Stop the program.
 ### Program:
 
-
+```
 
 
 
@@ -42,7 +42,7 @@ dfs(visited, graph, '5')
 
 
 
-
+```
 
 
 
