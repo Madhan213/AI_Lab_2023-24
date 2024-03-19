@@ -15,9 +15,6 @@ To write a python program to implement Depth first Search.
 
 ```
 
-
-
-
 graph = {
   '5' : ['3','7'],
   '3' : ['2', '4'],
@@ -40,13 +37,7 @@ def dfs(visited, graph, node):  #function for dfs
 print("Following is the Depth-First Search")
 dfs(visited, graph, '5')
 
-
-
 ```
-
-
-
-
 
 ### Output:
 
